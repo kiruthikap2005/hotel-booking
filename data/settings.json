@@ -1,0 +1,29 @@
+{
+    "roomTypes": [
+        {
+            "name": "Single Room",
+            "baseModifier": 1.0,
+            "maxGuests": 1,
+            "available": true
+        },
+        {
+            "name": "Double Room",
+            "baseModifier": 1.5,
+            "maxGuests": 2,
+            "available": true
+        },
+        {
+            "name": "Deluxe Room",
+            "baseModifier": 2.2,
+            "maxGuests": 3,
+            "available": true
+        },
+        {
+            "name": "Suite",
+            "baseModifier": 3.5,
+            "maxGuests": 4,
+            "available": true
+        }
+    ],
+    "extraGuestCharge": 1000
+}
