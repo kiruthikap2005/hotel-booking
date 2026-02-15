@@ -240,7 +240,7 @@ const HotelDetails = ({ user, settings }) => {
     useEffect(() => {
         fetch('/api/hotels')
             .then(res => res.json())
-            .then(data => setHotel(data.find(h => h.id === parseInt(id))));
+            .then(data => setHotel(data.find(h => String(h.id) === String(id))));
     }, [id]);
 
     const handleBook = async (e) => {

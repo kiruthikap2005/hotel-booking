@@ -1,33 +1,14 @@
 {
   "name": "hotel-website",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "server": "node server.js",
-    "start": "concurrently --kill-others \"npm run dev\" \"npm run server\"",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "bcryptjs": "^3.0.3",
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.3",
-    "express": "^5.2.1",
-    "fs-extra": "^11.3.3",
-    "jsonwebtoken": "^9.0.3",
-    "lucide-react": "^0.562.0",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3",
-    "react-router-dom": "^7.11.0"
+    "install:all": "npm install --prefix frontend && npm install --prefix backend",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "npm --prefix backend run server",
+    "start": "concurrently --kill-others \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "build": "npm --prefix frontend run build"
   },
   "devDependencies": {
-    "@vitejs/plugin-react-swc": "^4.2.2",
-    "concurrently": "^9.2.1",
-    "vite": "^7.3.0"
+    "concurrently": "^9.2.1"
   }
 }
